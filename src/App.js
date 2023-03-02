@@ -1,8 +1,9 @@
-function App() {
+import Home from "./Components/Home";
+
+export default function App() {
   return (
     <>
+    <Home />
     </>
   );
 }
-
-export default App;
