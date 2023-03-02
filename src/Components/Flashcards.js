@@ -1,9 +1,9 @@
-import Card from "./Card"
+import Card from "./Card";
 
-export default function Flashcards(){
-    return(
-        <>
-        <Card />
-        </>
-    );
+export default function Flashcards() {
+  return (
+    <>
+      <Card />
+    </>
+  );
 }
