@@ -11,13 +11,12 @@ export default function Logo() {
 }
 
 const SuperiorBar = styled.div`
-  margin-top: 54px;
+  margin-top: 42px;
   display: flex;
   align-items: center;
   img {
     width: 52px;
     height: 60px;
-    top: 48px;
   }
   h2 {
     font-family: "Righteous";
