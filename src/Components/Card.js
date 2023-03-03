@@ -1,17 +1,41 @@
 import styled from "styled-components";
 import play from "../assets/seta_play.png";
 import turn from "../assets/seta_virar.png";
-import Infos from "../mock";
+import wrong from "../assets/icone_erro.png";
+import allMost from "../assets/icone_quase.png";
+import right from "../assets/icone_certo.png";
 
-export default function Card({ setDeck, deck }) {
+export default function Card({ q, index, setDeck, deck, setMade, made}) {
+  function cor(note){
+    if (note === wrong){
+      return 'red';
+    } else if ( note === allMost){
+      return 'yellow';
+    } else{
+      return 'green';
+    }
+  }
+
+  function result(q, index, note){
+    setDeck(
+      <CardStyleResult>
+        <h4 className={cor(note)} >Pergunta {index + 1}</h4>
+        <img onClick={() => question(q, index)} src={note} alt="play" />
+      </CardStyleResult>
+    );
+
+    const done = made +1
+    setMade(done);
+  }
+
   function answer(q, index) {
     setDeck(
-      <CardStyleAnswer key={index}>
+      <CardStyleAnswer>
         <h4>{q.answer}</h4>
         <div>
-          <button className="red">Não lembrei</button>
-          <button className="yellow">Quase não lembrei</button>
-          <button className="green">Zap!</button>
+          <button onClick={() => result(q, index, wrong)} className="red">Não lembrei</button>
+          <button onClick={() => result(q, index, allMost)} className="yellow">Quase não lembrei</button>
+          <button onClick={() => result(q, index, right)} className="green">Zap!</button>
         </div>
       </CardStyleAnswer>
     );
@@ -19,7 +43,7 @@ export default function Card({ setDeck, deck }) {
 
   function question(q, index) {
     setDeck(
-      <CardStyleQuestion key={index}>
+      <CardStyleQuestion>
         <h4>{q.question}</h4>
         <img onClick={() => answer(q, index)} src={turn} alt="turn" />
       </CardStyleQuestion>
@@ -28,20 +52,17 @@ export default function Card({ setDeck, deck }) {
 
   return (
     <>
-      {Infos.map((q, index) =>
-        deck ? (
-          deck
-        ) : (
-          <CardStyleCard key={index}>
+      {deck ? deck : (
+          <CardStyle>
             <h4>Pergunta {index + 1}</h4>
             <img onClick={() => question(q, index)} src={play} alt="play" />
-          </CardStyleCard>
+          </CardStyle>
         )
-      )}
+      }
     </>
   );
 }
-const CardStyleCard = styled.div`
+const CardStyle = styled.div`
   width: 300px;
   height: 65px;
   background: #ffffff;
@@ -65,6 +86,7 @@ const CardStyleCard = styled.div`
     height: 23px;
   }
 `;
+
 const CardStyleQuestion = styled.div`
   width: 300px;
   height: 131px;
@@ -91,6 +113,7 @@ const CardStyleQuestion = styled.div`
     height: 20px;
   }
 `;
+
 const CardStyleAnswer = styled.div`
   width: 300px;
   height: auto;
@@ -137,5 +160,39 @@ const CardStyleAnswer = styled.div`
   }
   .green {
     background: #2fbe34;
+  }
+`;
+
+const CardStyleResult = styled.div`
+  width: 300px;
+  height: 65px;
+  background: #ffffff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    margin-left: 15px;
+    font-family: "Recursive";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: line-through;
+  }
+  img {
+    margin-right: 22px;
+    width: 23px;
+    height: 23px;
+  }
+  .red {
+    color: #ff3030;
+  }
+  .yellow {
+    color: #ff922e;
+  }
+  .green {
+    color: #2fbe34;
   }
 `;

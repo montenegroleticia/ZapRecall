@@ -5,12 +5,12 @@ import styled from "styled-components";
 import { useState } from "react";
 
 export default function Home() {
-  const [made, setMade] = useState(`${0}/8`);
+  const [made, setMade] = useState(0);
 
   return (
     <Homepage>
       <Logo />
-      <Flashcards setMade={setMade}/>
+      <Flashcards setMade={setMade} made={made} />
       <Counter made={made} />
     </Homepage>
   );
