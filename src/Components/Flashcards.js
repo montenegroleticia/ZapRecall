@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import Card from "./Card";
+import Question from "./Question"
 
 export default function Flashcards() {
   return (
     <Deck>
+      <Question />
       <Card />
     </Deck>
   );

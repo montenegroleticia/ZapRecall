@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import play from "../assets/seta_play.png"
+import turn from "../assets/seta_virar.png";
 import Infos from "../mock";
 
 export default function Card() {
@@ -7,8 +7,8 @@ export default function Card() {
     <>
       {Infos.map((p, index) => (
         <CardStyle key={index}>
-          <h4>Pergunta {index + 1}</h4>
-          <img src={play} alt="play" />
+          <h4>{p.question}</h4>
+          <img src={turn} alt="turn"/>
         </CardStyle>
       ))}
     </>
@@ -16,15 +16,16 @@ export default function Card() {
 }
 const CardStyle = styled.div`
   width: 300px;
-  height: 65px;
+  height: 131px;
   background: #ffffff;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   h4 {
     margin-left: 15px;
+    margin-top: 18px;
     font-family: "Recursive";
     font-style: normal;
     font-weight: 700;
@@ -33,8 +34,9 @@ const CardStyle = styled.div`
     color: #333333;
   }
   img {
-    margin-right: 22px;
-    width: 20px;
-    height: 23px;
+    margin-left: 255px;
+    margin-bottom: 6px;
+    width: 30px;
+    height: 20px;
   }
 `;
