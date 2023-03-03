@@ -28,9 +28,9 @@ const CardStyle = styled.div`
     margin-top: 18px;
     font-family: "Recursive";
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
     color: #333333;
   }
   img {
