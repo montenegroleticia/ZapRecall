@@ -8,7 +8,7 @@ export default function Card() {
       {Infos.map((p, index) => (
         <CardStyle key={index}>
           <h4>{p.question}</h4>
-          <img src={turn} alt="turn"/>
+          <img src={turn} alt="turn" />
         </CardStyle>
       ))}
     </>
