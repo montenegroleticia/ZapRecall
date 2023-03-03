@@ -7,7 +7,7 @@ export default function Flashcards() {
 
   return (
     <Deck>
-      {deck ? deck : <Card setDeck={setDeck} deck={deck} />}
+      <Card setDeck={setDeck} deck={deck} />
     </Deck>
   );
 }
