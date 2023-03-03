@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function Counter() {
+export default function Counter({made}) {
   return (
     <InferiorBar>
-      <h3>CONCLUÍDOS</h3>
+      <h3>{made} CONCLUÍDOS</h3>
     </InferiorBar>
   );
 }
@@ -24,5 +24,6 @@ const InferiorBar = styled.div`
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+    color: #333333;
   }
 `;

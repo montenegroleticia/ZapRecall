@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import play from "../assets/seta_play.png"
 import Infos from "../mock";
+import Question from "./Question"
 
-export default function Card() {
+export default function Card({setDeck}) {
   return (
     <>
       {Infos.map((p, index) => (
         <CardStyle key={index}>
           <h4>Pergunta {index + 1}</h4>
-          <img src={play} alt="play" />
+          <img onClick={() => (setDeck(<Question setDeck={setDeck} />))} src={play} alt="play" />
         </CardStyle>
       ))}
     </>

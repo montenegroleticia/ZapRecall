@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import turn from "../assets/seta_virar.png";
 import Infos from "../mock";
+import Answer from "./Answer"
 
-export default function Card() {
+export default function Card({setDeck}) {
   return (
     <>
       {Infos.map((p, index) => (
         <CardStyle key={index}>
           <h4>{p.question}</h4>
-          <img src={turn} alt="turn" />
+          <img onClick={() => (setDeck(<Answer />))} src={turn} alt="turn" />
         </CardStyle>
       ))}
     </>

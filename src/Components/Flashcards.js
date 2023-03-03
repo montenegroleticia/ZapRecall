@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import Card from "./Card";
-import Question from "./Question"
-import Answer from "./Answer"
+import { useState } from "react";
 
 export default function Flashcards() {
+  const [deck, setDeck] = useState();
+
   return (
     <Deck>
-      <Answer />
-      <Question />
-      <Card />
+      {deck ? deck : <Card setDeck={setDeck} deck={deck} />}
     </Deck>
   );
 }
