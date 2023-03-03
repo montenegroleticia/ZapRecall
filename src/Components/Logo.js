@@ -17,6 +17,7 @@ const SuperiorBar = styled.div`
   img {
     width: 52px;
     height: 60px;
+    top: 48px;
   }
   h2 {
     font-family: "Righteous";

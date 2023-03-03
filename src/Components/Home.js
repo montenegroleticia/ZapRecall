@@ -14,11 +14,11 @@ export default function Home() {
 }
 
 const Homepage = styled.div`
-  width: 375px;
-  height: 667px;
+  width: auto;
+  height: auto;
   background: #fb6b6b;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  margin: auto;
 `;

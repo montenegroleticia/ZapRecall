@@ -16,6 +16,8 @@ const InferiorBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 0px;
   h3 {
     font-family: "Recursive";
     font-style: normal;
