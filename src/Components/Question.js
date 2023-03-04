@@ -9,8 +9,8 @@ export default function Question({ q, setAnswer, setQuestion }) {
 
   return (
     <CardStyleQuestion>
-      <h4>{q.question}</h4>
-      <img onClick={() => callAnswer()} src={turn} alt="turn" />
+      <h4 data-test="flashcard-text" >{q.question}</h4>
+      <img data-test="turn-btn" onClick={() => callAnswer()} src={turn} alt="turn" />
     </CardStyleQuestion>
   );
 }

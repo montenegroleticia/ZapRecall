@@ -3,7 +3,7 @@ import wrong from "../assets/icone_erro.png";
 import allMost from "../assets/icone_quase.png";
 import right from "../assets/icone_certo.png";
 
-export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor }) {
+export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor, setTest }) {
   function callResult(note) {
     setAnswer(false);
 
@@ -15,15 +15,15 @@ export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor 
 
   return (
     <CardStyleAnswer>
-      <h4>{q.answer}</h4>
+      <h4 data-test="flashcard-text" >{q.answer}</h4>
       <div>
-        <button onClick={() => {callResult(wrong); setColor("red")}} className="red">
+        <button data-test="no-btn" onClick={() => {callResult(wrong); setColor("red"); setTest("no-icon")}} className="red">
           Não lembrei
         </button>
-        <button onClick={() => {callResult(allMost); setColor("yellow")}} className="yellow">
+        <button data-test="partial-btn" onClick={() => {callResult(allMost); setColor("yellow"); setTest("partial-icon")}} className="yellow">
           Quase não lembrei
         </button>
-        <button onClick={() => {callResult(right); setColor("green")}} className="green">
+        <button data-test="zap-btn" onClick={() => {callResult(right); setColor("green"); setTest("zap-icon")}} className="green">
           Zap!
         </button>
       </div>

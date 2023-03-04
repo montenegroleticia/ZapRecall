@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default function Result({ number, icon, color }) {
+export default function Result({ number, icon, color, test }) {
   return (
     <CardStyleResult>
-      <h4 className={color}>Pergunta {number}</h4>
-      <img src={icon} alt={icon} />
+      <h4 data-test="flashcard-text" className={color}>Pergunta {number}</h4>
+      <img data-test={test} src={icon} alt={icon} />
     </CardStyleResult>
   );
 }

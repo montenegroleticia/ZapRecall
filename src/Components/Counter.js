@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function Counter({made}) {
   return (
     <InferiorBar>
-      <h3>{made}/8 CONCLUÍDOS</h3>
+      <h3 data-test="footer" >{made}/8 CONCLUÍDOS</h3>
     </InferiorBar>
   );
 }
