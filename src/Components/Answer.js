@@ -22,7 +22,7 @@ export default function Answer({
   }
 
   return (
-    <CardStyleAnswer>
+    <CardStyleAnswer data-test="flashcard" >
       <h4 data-test="flashcard-text">{q.answer}</h4>
       <div>
         <button

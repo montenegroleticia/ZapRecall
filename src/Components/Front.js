@@ -8,7 +8,7 @@ export default function Front({ number, setFront, setQuestion }) {
   }
 
   return (
-    <CardStyle>
+    <CardStyle data-test="flashcard">
       <h4 data-test="flashcard-text">Pergunta {number}</h4>
       <img
         data-test="play-btn"

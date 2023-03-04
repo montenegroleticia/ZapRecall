@@ -8,7 +8,7 @@ export default function Question({ q, setAnswer, setQuestion }) {
   }
 
   return (
-    <CardStyleQuestion>
+    <CardStyleQuestion data-test="flashcard" >
       <h4 data-test="flashcard-text">{q.question}</h4>
       <img
         data-test="turn-btn"

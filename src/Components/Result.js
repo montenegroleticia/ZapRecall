@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Result({ number, icon, color, test }) {
   return (
-    <CardStyleResult>
+    <CardStyleResult data-test="flashcard" >
       <h4 data-test="flashcard-text" className={color}>
         Pergunta {number}
       </h4>
