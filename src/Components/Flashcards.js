@@ -4,7 +4,7 @@ import Infos from "../mock";
 
 export default function Flashcards({ setMade, made }) {
   return (
-    <Deck data-test="flashcard" >
+    <Deck data-test="flashcard">
       {Infos.map((q) => (
         <Card
           q={q}

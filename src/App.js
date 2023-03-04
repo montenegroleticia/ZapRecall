@@ -5,9 +5,5 @@ import LandingPage from "./Components/LandingPage";
 export default function App() {
   const [click, setClick] = useState();
 
-  return (
-    <>
-    {click ? <Home /> : <LandingPage setClick={setClick} />}
-    </>
-  );
+  return <>{click ? <Home /> : <LandingPage setClick={setClick} />}</>;
 }

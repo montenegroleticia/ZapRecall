@@ -9,8 +9,13 @@ export default function Front({ number, setFront, setQuestion }) {
 
   return (
     <CardStyle>
-      <h4 data-test="flashcard-text" >Pergunta {number}</h4>
-      <img data-test="play-btn" onClick={() => callQuestion()} src={play} alt="play" />
+      <h4 data-test="flashcard-text">Pergunta {number}</h4>
+      <img
+        data-test="play-btn"
+        onClick={() => callQuestion()}
+        src={play}
+        alt="play"
+      />
     </CardStyle>
   );
 }

@@ -3,7 +3,15 @@ import wrong from "../assets/icone_erro.png";
 import allMost from "../assets/icone_quase.png";
 import right from "../assets/icone_certo.png";
 
-export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor, setTest }) {
+export default function Answer({
+  q,
+  setAnswer,
+  made,
+  setMade,
+  setIcon,
+  setColor,
+  setTest,
+}) {
   function callResult(note) {
     setAnswer(false);
 
@@ -15,15 +23,39 @@ export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor,
 
   return (
     <CardStyleAnswer>
-      <h4 data-test="flashcard-text" >{q.answer}</h4>
+      <h4 data-test="flashcard-text">{q.answer}</h4>
       <div>
-        <button data-test="no-btn" onClick={() => {callResult(wrong); setColor("red"); setTest("no-icon")}} className="red">
+        <button
+          data-test="no-btn"
+          onClick={() => {
+            callResult(wrong);
+            setColor("red");
+            setTest("no-icon");
+          }}
+          className="red"
+        >
           Não lembrei
         </button>
-        <button data-test="partial-btn" onClick={() => {callResult(allMost); setColor("yellow"); setTest("partial-icon")}} className="yellow">
+        <button
+          data-test="partial-btn"
+          onClick={() => {
+            callResult(allMost);
+            setColor("yellow");
+            setTest("partial-icon");
+          }}
+          className="yellow"
+        >
           Quase não lembrei
         </button>
-        <button data-test="zap-btn" onClick={() => {callResult(right); setColor("green"); setTest("zap-icon")}} className="green">
+        <button
+          data-test="zap-btn"
+          onClick={() => {
+            callResult(right);
+            setColor("green");
+            setTest("zap-icon");
+          }}
+          className="green"
+        >
           Zap!
         </button>
       </div>
@@ -44,7 +76,7 @@ const CardStyleAnswer = styled.div`
     margin-left: 15px;
     margin-top: 18px;
     margin-right: 37px;
-    font-family: "Recursive", sans-serif;;
+    font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
