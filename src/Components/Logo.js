@@ -14,12 +14,14 @@ const SuperiorBar = styled.div`
   margin-top: 42px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 255px;
   img {
     width: 52px;
     height: 60px;
   }
   h2 {
-    font-family: "Righteous";
+    font-family: "Righteous", cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;

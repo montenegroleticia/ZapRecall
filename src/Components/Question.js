@@ -9,8 +9,13 @@ export default function Question({ q, setAnswer, setQuestion }) {
 
   return (
     <CardStyleQuestion>
-      <h4 data-test="flashcard-text" >{q.question}</h4>
-      <img data-test="turn-btn" onClick={() => callAnswer()} src={turn} alt="turn" />
+      <h4 data-test="flashcard-text">{q.question}</h4>
+      <img
+        data-test="turn-btn"
+        onClick={() => callAnswer()}
+        src={turn}
+        alt="turn"
+      />
     </CardStyleQuestion>
   );
 }
@@ -27,7 +32,7 @@ const CardStyleQuestion = styled.div`
   h4 {
     margin-left: 15px;
     margin-top: 18px;
-    font-family: "Recursive";
+    font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

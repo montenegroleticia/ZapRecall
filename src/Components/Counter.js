@@ -19,7 +19,7 @@ const InferiorBar = styled.div`
   position: fixed;
   bottom: 0px;
   h3 {
-    font-family: "Recursive";
+    font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;

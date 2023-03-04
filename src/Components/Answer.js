@@ -44,7 +44,7 @@ const CardStyleAnswer = styled.div`
     margin-left: 15px;
     margin-top: 18px;
     margin-right: 37px;
-    font-family: "Recursive";
+    font-family: "Recursive", sans-serif;;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -63,7 +63,7 @@ const CardStyleAnswer = styled.div`
     border-radius: 5px;
     border: transparent;
     color: #ffffff;
-    font-family: "Recursive";
+    font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;

@@ -26,7 +26,7 @@ const CardStyle = styled.div`
   justify-content: space-between;
   h4 {
     margin-left: 15px;
-    font-family: "Recursive";
+    font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

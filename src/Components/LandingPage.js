@@ -26,7 +26,7 @@ const Land = styled.div`
   }
   h1 {
     margin-top: 13px;
-    font-family: "Righteous";
+    font-family: "Righteous", cursive;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
