@@ -3,7 +3,7 @@ import wrong from "../assets/icone_erro.png";
 import allMost from "../assets/icone_quase.png";
 import right from "../assets/icone_certo.png";
 
-export default function Answer({ q, setAnswer, made, setMade, setIcon }) {
+export default function Answer({ q, setAnswer, made, setMade, setIcon, setColor }) {
   function callResult(note) {
     setAnswer(false);
 
@@ -17,13 +17,13 @@ export default function Answer({ q, setAnswer, made, setMade, setIcon }) {
     <CardStyleAnswer>
       <h4>{q.answer}</h4>
       <div>
-        <button onClick={() => callResult(wrong)} className="red">
+        <button onClick={() => {callResult(wrong); setColor("red")}} className="red">
           Não lembrei
         </button>
-        <button onClick={() => callResult(allMost)} className="yellow">
+        <button onClick={() => {callResult(allMost); setColor("yellow")}} className="yellow">
           Quase não lembrei
         </button>
-        <button onClick={() => callResult(right)} className="green">
+        <button onClick={() => {callResult(right); setColor("green")}} className="green">
           Zap!
         </button>
       </div>

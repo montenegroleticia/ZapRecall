@@ -9,6 +9,7 @@ export default function Card({ q, number, setMade, made }) {
   const [question, setQuestion] = useState(false);
   const [answer, setAnswer] = useState(false);
   const [icon, setIcon] = useState();
+  const [color, setColor] = useState();
 
   return (
     <>
@@ -28,9 +29,10 @@ export default function Card({ q, number, setMade, made }) {
           setMade={setMade}
           made={made}
           setIcon={setIcon}
+          setColor={setColor}
         />
       ) : (
-        <Result number={number} icon={icon} />
+        <Result number={number} icon={icon} color={color} />
       )}
     </>
   );

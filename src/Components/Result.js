@@ -1,21 +1,9 @@
 import styled from "styled-components";
-import wrong from "../assets/icone_erro.png";
-import allMost from "../assets/icone_quase.png";
 
-export default function Result({ number, icon }) {
-  function cor(icon) {
-    if (icon === wrong) {
-      return "red";
-    } else if (icon === allMost) {
-      return "yellow";
-    } else {
-      return "green";
-    }
-  }
-
+export default function Result({ number, icon, color }) {
   return (
     <CardStyleResult>
-      <h4 className={cor()}>Pergunta {number}</h4>
+      <h4 className={color}>Pergunta {number}</h4>
       <img src={icon} alt={icon} />
     </CardStyleResult>
   );
