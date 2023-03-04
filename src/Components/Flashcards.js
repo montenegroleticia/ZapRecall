@@ -1,14 +1,19 @@
 import styled from "styled-components";
 import Card from "./Card";
-import { useState } from "react";
 import Infos from "../mock";
 
-export default function Flashcards({setMade, made}) {
-  const [deck, setDeck] = useState();
-
+export default function Flashcards({ setMade, made }) {
   return (
     <Deck>
-      {Infos.map((q, index) => (<Card q={q} index={index} key={index} setDeck={setDeck} deck={deck} setmade={setMade} made={made} />))}
+      {Infos.map((q) => (
+        <Card
+          q={q}
+          number={Infos.indexOf(q) + 1}
+          key={Infos.indexOf(q)}
+          setMade={setMade}
+          made={made}
+        />
+      ))}
     </Deck>
   );
 }

@@ -6,7 +6,9 @@ export default function LandingPage({ setClick }) {
     <Land>
       <img src={logo} alt="logo" />
       <h1>ZapRecall</h1>
-      <button onClick={() => setClick("ok")}>Iniciar Recall</button>
+      <button data-test="start-btn" onClick={() => setClick("ok")}>
+        Iniciar Recall
+      </button>
     </Land>
   );
 }
