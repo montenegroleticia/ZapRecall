@@ -6,7 +6,7 @@ export default function Result({
   color,
   test,
 }) {
-  
+
   return (
     <CardStyleResult data-test="flashcard">
       <h4 data-test="flashcard-text" className={color}>

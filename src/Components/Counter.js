@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export default function Counter({ made, iconFooter }) {
   return (
-    <InferiorBar>
-      <h3 data-test="footer">{made}/8 CONCLUÍDOS</h3>
+    <InferiorBar data-test="footer">
+      <h3>{made}/8 CONCLUÍDOS</h3>
       <div>
         {iconFooter.map((icon, index) => (
           <img key={index} data-test={icon.test} src={icon.icon} alt="ícone" />
