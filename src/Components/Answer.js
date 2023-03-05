@@ -11,6 +11,8 @@ export default function Answer({
   setIcon,
   setColor,
   setTest,
+  setIconFooter,
+  iconFooter,
 }) {
   function callResult(note) {
     setAnswer(false);
@@ -28,9 +30,10 @@ export default function Answer({
         <button
           data-test="no-btn"
           onClick={() => {
-            callResult(wrong);
             setColor("red");
             setTest("no-icon");
+            callResult(wrong);
+            setIconFooter([...iconFooter, {icon: wrong, test:"no-icon"}]);
           }}
           className="red"
         >
@@ -42,6 +45,7 @@ export default function Answer({
             callResult(allMost);
             setColor("yellow");
             setTest("partial-icon");
+            setIconFooter([...iconFooter, {icon: allMost, test:"partial-icon"}]);
           }}
           className="yellow"
         >
@@ -53,6 +57,7 @@ export default function Answer({
             callResult(right);
             setColor("green");
             setTest("zap-icon");
+            setIconFooter([...iconFooter, {icon: right, test:"zap-icon"}]);
           }}
           className="green"
         >

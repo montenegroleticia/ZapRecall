@@ -4,7 +4,14 @@ import Question from "./Question";
 import Answer from "./Answer";
 import Result from "./Result";
 
-export default function Card({ q, number, setMade, made }) {
+export default function Card({
+  q,
+  number,
+  setMade,
+  made,
+  setIconFooter,
+  iconFooter,
+}) {
   const [front, setFront] = useState(true);
   const [question, setQuestion] = useState(false);
   const [answer, setAnswer] = useState(false);
@@ -32,9 +39,16 @@ export default function Card({ q, number, setMade, made }) {
           setIcon={setIcon}
           setColor={setColor}
           setTest={setTest}
+          setIconFooter={setIconFooter}
+          iconFooter={iconFooter}
         />
       ) : (
-        <Result number={number} icon={icon} color={color} test={test} />
+        <Result
+          number={number}
+          icon={icon}
+          color={color}
+          test={test}
+        />
       )}
     </>
   );

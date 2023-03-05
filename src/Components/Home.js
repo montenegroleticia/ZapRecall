@@ -6,12 +6,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [made, setMade] = useState(0);
+  const [iconFooter, setIconFooter] = useState([]);
 
   return (
     <Homepage>
       <Logo />
-      <Flashcards setMade={setMade} made={made} />
-      <Counter made={made} />
+      <Flashcards setMade={setMade} made={made} setIconFooter={setIconFooter} iconFooter={iconFooter} />
+      <Counter made={made} iconFooter={iconFooter} />
     </Homepage>
   );
 }

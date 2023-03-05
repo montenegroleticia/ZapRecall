@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Card from "./Card";
 import Infos from "../mock";
 
-export default function Flashcards({ setMade, made }) {
+export default function Flashcards({ setMade, made, setIconFooter, iconFooter }) {
   return (
     <Deck>
       {Infos.map((q) => (
@@ -12,6 +12,8 @@ export default function Flashcards({ setMade, made }) {
           key={Infos.indexOf(q)}
           setMade={setMade}
           made={made}
+          setIconFooter={setIconFooter}
+          iconFooter={iconFooter}
         />
       ))}
     </Deck>
