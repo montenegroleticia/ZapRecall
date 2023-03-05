@@ -7,7 +7,8 @@ export default function Counter({ made, iconFooter }) {
   const [message, setMessage] = useState();
 
   function callMessage() {
-    if (made === 8) {
+    const done = 8;
+    if (made === done) {
       const filteredIcons = iconFooter.filter(
         (icon) => icon.test === "no-icon"
       );
@@ -57,6 +58,7 @@ const InferiorBar = styled.div`
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   width: 100%;
   min-height: 70px;
+  max-height: 171px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +96,7 @@ const InferiorBar = styled.div`
     display: flex;
   }
   .icons {
-    margin-top: -17px;
+    margin-top: -15px;
     margin-bottom: 10px;
     display: flex;
   }
