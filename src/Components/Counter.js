@@ -66,6 +66,7 @@ const InferiorBar = styled.div`
   position: fixed;
   bottom: 0px;
   h2 {
+    margin-left: 12px;
     font-family: "Recursive", sans-serif;
     font-style: normal;
     font-weight: 700;
