@@ -14,7 +14,7 @@ export default function LandingPage({ setClick }) {
 }
 const Land = styled.div`
   width: auto;
-  height: 667px;
+  height: 100vh;
   background: #fb6b6b;
   display: flex;
   flex-direction: column;
