@@ -95,8 +95,8 @@ const CardStyleAnswer = styled.div`
     margin-bottom: 10px;
   }
   button {
-    width: 85px;
-    height: 37px;
+    width: 85.7px;
+    height: 37.7px;
     border-radius: 5px;
     border: transparent;
     color: #ffffff;
