@@ -23,7 +23,7 @@ export default function Question({ q, setAnswer, setQuestion }) {
 const CardStyleQuestion = styled.div`
   width: 300px;
   height: 131px;
-  background: #ffffff;
+  background: #FFFFD5;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   display: flex;
